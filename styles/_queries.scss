@@ -1,0 +1,56 @@
+@media (max-width: 1000px) {
+  body {
+    overflow: hidden;
+  }
+
+  .card {
+    flex-direction: column-reverse;
+    
+    justify-content: center;
+    position: relative;
+  }
+
+  .left {
+    height: 60vh;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+    transform: translateX(25%);
+  }
+
+  .logo {
+    position: absolute;
+    top: 0;
+    display: none;
+  }
+
+  .main {
+    transform: translateY(0);
+    
+    &__headline {
+      font-size: 4rem;
+    }
+  }
+
+  .left__container {
+    flex: 5!important;
+  }
+
+  .container {
+    height: 800px;
+    width: 100%;
+  }
+
+  .right {
+    background-image: url("../images/hero-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    & img {
+      width: 50%;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+}

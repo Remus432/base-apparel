@@ -1,0 +1,102 @@
+.left__container {
+  display: grid;
+  place-content: center;
+  background-image: linear-gradient(135deg, rgba($gradient-2, .2), rgba($gradient-1, .2)), linear-gradient(135deg, rgba($gradient-3, .2), rgba($gradient-4, .2)), url("../images/bg-pattern-desktop.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  position: relative;
+  flex: 5;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(135deg, rgba($gradient-2, .2), rgba($gradient-1, .2)), linear-gradient(135deg, rgba($gradient-3, .2), rgba($gradient-4, .2)), url("../images/bg-pattern-desktop.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    z-index: -1;
+  }
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: auto;
+  height: 100vh;
+  padding: 2rem 0rem;
+  padding-left: 15rem;
+}
+
+.main {
+  transform: translateY(-50px);
+
+  &__headline {
+    font-size: 8rem;
+    letter-spacing: 1.5rem;
+
+    & span {
+      color: $desatured-red;
+      font-weight: 300;
+    }
+  }
+
+  &__description {
+    color: $desatured-red;
+    width: 55%;
+    line-height: 2.5rem;
+    margin-top: 1.5rem;
+  }
+
+  &__input-group {
+    margin-top: 3rem;
+    border-radius: 30px;
+    border: 1px solid rgba($dark-grayish-red, .2);
+    width: 50%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-email {
+      border: none;
+      background: none;
+      padding: 1rem 2rem;
+      width: 100%;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &-btn {
+      background-color: $soft-red;
+      border: none;
+      border-radius: 25px;
+      padding: 1rem 3rem;
+      box-shadow: 0 15px 15px rgba($soft-red, $alpha: .3);
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: .5s ease-in;
+      cursor: pointer;
+
+      &:hover {
+        background-color: lighten($soft-red, 5%);
+      }
+    }
+  }
+}
+
+.message {
+  color: $soft-red;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}

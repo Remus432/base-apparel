@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  overflow: hidden;
+}
+
+.card {
+  display: flex;
+ 
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.active {
+  opacity: 1;
+}
+
+.warning {
+  border: 1px solid $soft-red!important;
+}
